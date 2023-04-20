@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domains
+namespace Bl
 {
-    public class SincCalModel
+    internal interface IBusinessLayer
     {
-        public float fSincNumber { get; set; }
     }
 }
