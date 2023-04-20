@@ -36,7 +36,6 @@ namespace Bl
             }
 
             Console.WriteLine($"result of sum = {table.fNumber1 + table.fNumber2}\n\n **************************");
-
         }
 
         #endregion

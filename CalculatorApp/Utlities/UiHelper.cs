@@ -10,30 +10,35 @@ namespace CalculatorApp.Utlities
 {
     public class UiHelper
     {
+        #region dependency injection
         IBusinessLayer<NormalCalModel> oClsNormalCal;
         IBusinessLayer<SincCalModel> oClsSincCal;
-        public UiHelper(IBusinessLayer<NormalCalModel> normalCalModel, IBusinessLayer<SincCalModel> sincCalModel)
+        NormalCalModel normalCal;
+        SincCalModel sincCal;
+        public UiHelper(IBusinessLayer<NormalCalModel> normalCalModel, IBusinessLayer<SincCalModel> sincCalModel, NormalCalModel _normalCal, SincCalModel _sincCal)
         {
             oClsNormalCal = normalCalModel;
             oClsSincCal = sincCalModel;
+            normalCal = _normalCal;
+            sincCal = _sincCal;
         }
+        #endregion
+
+        #region MainOptions
         public void MainOptions()
         {
-
-
-
             Console.WriteLine("*** wlc to cal app :\n");
             Console.WriteLine("press e to exit  :\n");
             Console.WriteLine("press 1 to normal calculator :\n");
             Console.WriteLine("press 2 to scientific calculator :\n");
             Console.WriteLine("press 3 to proff calculator  :\n");
-        }
+        } 
+        #endregion
 
         #region NormalCalOptions
 
-        public void NormalCalOptions(NormalCalModel model)
+        public void NormalCalOptions()
         {
-
             string sVarSwitch = string.Empty;
             while (sVarSwitch != "b")
             {
@@ -44,8 +49,6 @@ namespace CalculatorApp.Utlities
                 Console.WriteLine("press 4 to div number  :\n");
 
                 sVarSwitch = Console.ReadLine();
-
-
                 switch (sVarSwitch)
                 {
                     case "b":
@@ -54,34 +57,27 @@ namespace CalculatorApp.Utlities
                         break;
                     case "1":
                         Console.Clear();
-
-
-                        oClsNormalCal.Add(model);
+                        oClsNormalCal.Add(normalCal);
                         break;
                     case "2":
                         Console.Clear();
-
-                        oClsNormalCal.Sub(model);
+                        oClsNormalCal.Sub(normalCal);
                         break;
                     case "3":
                         Console.Clear();
-
-                        oClsNormalCal.Mul(model);
+                        oClsNormalCal.Mul(normalCal);
                         break;
                     case "4":
                         Console.Clear();
-
-                        oClsNormalCal.Div(model);
+                        oClsNormalCal.Div(normalCal);
                         break;
                 }
-
             }
         }
         #endregion
 
-
         #region SinCalOptions
-        public void SinCalOptions(SincCalModel sincmodel)
+        public void SinCalOptions()
         {
             string sVarSwitch = string.Empty;
             while (sVarSwitch != "b")
@@ -92,7 +88,6 @@ namespace CalculatorApp.Utlities
                 Console.WriteLine("press 3 to tan (number)  :\n");
 
                 sVarSwitch = Console.ReadLine();
-
                 switch (sVarSwitch)
                 {
                     case "b":
@@ -101,22 +96,17 @@ namespace CalculatorApp.Utlities
                         break;
                     case "1":
                         Console.Clear();
-
-                        oClsSincCal.Sin(sincmodel);
+                        oClsSincCal.Sin(sincCal);
                         break;
                     case "2":
                         Console.Clear();
-
-                        oClsSincCal.Cos(sincmodel);
+                        oClsSincCal.Cos(sincCal);
                         break;
                     case "3":
                         Console.Clear();
-
-                        oClsSincCal.tan(sincmodel);
+                        oClsSincCal.tan(sincCal);
                         break;
-
                 }
-
             }
         }
         #endregion
