@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorApp", "CalculatorApp\CalculatorApp.csproj", "{4F8FDD52-713A-40C9-9CDE-4D5D2F173017}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domains", "Domains\Domains.csproj", "{1E9CC5B7-E3B6-4098-97C7-E495F05A0AE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bl", "Bl\Bl.csproj", "{2223DBF8-1DB5-4F19-B633-F9EE5BD11447}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4F8FDD52-713A-40C9-9CDE-4D5D2F173017}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F8FDD52-713A-40C9-9CDE-4D5D2F173017}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F8FDD52-713A-40C9-9CDE-4D5D2F173017}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F8FDD52-713A-40C9-9CDE-4D5D2F173017}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E9CC5B7-E3B6-4098-97C7-E495F05A0AE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E9CC5B7-E3B6-4098-97C7-E495F05A0AE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E9CC5B7-E3B6-4098-97C7-E495F05A0AE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E9CC5B7-E3B6-4098-97C7-E495F05A0AE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2223DBF8-1DB5-4F19-B633-F9EE5BD11447}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2223DBF8-1DB5-4F19-B633-F9EE5BD11447}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2223DBF8-1DB5-4F19-B633-F9EE5BD11447}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2223DBF8-1DB5-4F19-B633-F9EE5BD11447}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {133431A4-6741-4DDC-A396-E25B5BBC50C2}
+	EndGlobalSection
+EndGlobal
