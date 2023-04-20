@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace Bl
 {
-    internal interface IBusinessLayer
+    public interface IBusinessLayer<t>
     {
+        void Add(t table);
+        void Sub(t table);
+        void Mul(t table);
+        void Div(t table);
+        void Cos(t table);
+        void Sin(t table);
+        void tan(t table);
     }
 }
