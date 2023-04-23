@@ -56,19 +56,19 @@ namespace CalculatorApp.Utlities
                         sVarSwitch = "b";
                         break;
                     case "1":
-                        Console.Clear();
+                        nGetDataFromUser();
                         oClsNormalCal.Add(normalCal);
                         break;
                     case "2":
-                        Console.Clear();
+                        nGetDataFromUser();
                         oClsNormalCal.Sub(normalCal);
                         break;
                     case "3":
-                        Console.Clear();
+                        nGetDataFromUser();
                         oClsNormalCal.Mul(normalCal);
                         break;
                     case "4":
-                        Console.Clear();
+                        nGetDataFromUser();
                         oClsNormalCal.Div(normalCal);
                         break;
                 }
@@ -91,24 +91,74 @@ namespace CalculatorApp.Utlities
                 switch (sVarSwitch)
                 {
                     case "b":
-                        Console.Clear();
+                        sGetDataFromUser();
                         sVarSwitch = "b";
                         break;
                     case "1":
-                        Console.Clear();
+                        sGetDataFromUser();
                         oClsSincCal.Sin(sincCal);
                         break;
                     case "2":
-                        Console.Clear();
+                        sGetDataFromUser();
                         oClsSincCal.Cos(sincCal);
                         break;
                     case "3":
-                        Console.Clear();
+                        sGetDataFromUser();
                         oClsSincCal.tan(sincCal);
                         break;
                 }
             }
         }
+        #endregion
+
+        #region normal GetDataFromUser
+        public void nGetDataFromUser()
+        {
+            Console.Clear();
+            Console.WriteLine("plz enter F number");
+            float fParseNumber = 0;
+            bool bCanConvert = float.TryParse(Console.ReadLine(), out fParseNumber);
+            if (bCanConvert)
+            {
+                normalCal.fNumber1 = fParseNumber;
+            }
+            else
+            {
+                Console.WriteLine("plz enter valid Number");
+            }
+
+            Console.WriteLine("plz enter S number");
+            bCanConvert = float.TryParse(Console.ReadLine(), out fParseNumber);
+            if (bCanConvert)
+            {
+                normalCal.fNumber2 = fParseNumber;
+
+            }
+            else
+            {
+                Console.WriteLine("plz enter valid Number");
+            }
+        }
+        #endregion
+
+        #region since GetDataFromUser
+        public void sGetDataFromUser()
+        {
+            Console.Clear();
+            Console.WriteLine("plz enter ur number");
+
+            float fUserNumber;
+            bool bICanConvert = float.TryParse(Console.ReadLine(), out fUserNumber);
+            if (bICanConvert)
+            {
+                sincCal.fSincNumber = fUserNumber;
+
+            }
+            else
+            {
+                Console.WriteLine("enter a valid number");
+            }
+        } 
         #endregion
     }
 }
