@@ -14,18 +14,8 @@ namespace Bl
         #region Cos Function
         public void Cos(SincCalModel table)
         {
-            Console.WriteLine("plz enter ur number");
-
-            float fUserNumber;
-            bool bICanConvert = float.TryParse(Console.ReadLine(), out fUserNumber);
-            if (bICanConvert)
-            {
-                Console.WriteLine($"Cos({fUserNumber}) ={Math.Cos(fUserNumber)} \n\n **********************************");
-            }
-            else
-            {
-                Console.WriteLine("enter a valid number");
-            }
+            
+            Console.WriteLine($"Cos({table.fSincNumber}) ={Math.Cos(table.fSincNumber)} \n\n **********************************");
 
         }
         #endregion
@@ -33,36 +23,14 @@ namespace Bl
         #region Sin Function
         public void Sin(SincCalModel table)
         {
-            Console.WriteLine("plz enter ur number");
-
-            float fUserNumber;
-            bool bICanConvert = float.TryParse(Console.ReadLine(), out fUserNumber);
-            if (bICanConvert)
-            {
-                Console.WriteLine($"Sin({fUserNumber}) ={Math.Sin(fUserNumber)}\n\n **********************************");
-            }
-            else
-            {
-                Console.WriteLine("plz enter a valid number");
-            }
+            Console.WriteLine($"Sin({table.fSincNumber}) ={Math.Sin(table.fSincNumber)} \n\n **********************************");
         }
         #endregion
 
         #region Tan Function
         public void tan(SincCalModel table)
         {
-            Console.WriteLine("plz enter ur number");
-
-            float fUserNumber;
-            bool bICanConvert = float.TryParse(Console.ReadLine(), out fUserNumber);
-            if (bICanConvert)
-            {
-                Console.WriteLine($"Tan({fUserNumber}) ={Math.Tan(fUserNumber)}\n\n **********************************");
-            }
-            else
-            {
-                Console.WriteLine("plz enter a valid number");
-            }
+            Console.WriteLine($"tan({table.fSincNumber}) ={Math.Tan(table.fSincNumber)} \n\n **********************************");
         }
         #endregion
 
