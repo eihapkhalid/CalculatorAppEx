@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorApp", "CalculatorApp\CalculatorApp.csproj", "{4F8FDD52-713A-40C9-9CDE-4D5D2F173017}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculatorApp", "CalculatorApp\CalculatorApp.csproj", "{4F8FDD52-713A-40C9-9CDE-4D5D2F173017}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domains", "Domains\Domains.csproj", "{1E9CC5B7-E3B6-4098-97C7-E495F05A0AE9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domains", "Domains\Domains.csproj", "{1E9CC5B7-E3B6-4098-97C7-E495F05A0AE9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bl", "Bl\Bl.csproj", "{2223DBF8-1DB5-4F19-B633-F9EE5BD11447}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bl", "Bl\Bl.csproj", "{2223DBF8-1DB5-4F19-B633-F9EE5BD11447}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject", "UnitTestProject\UnitTestProject.csproj", "{7C7B5957-79A2-4117-843B-7B765A47EA39}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{2223DBF8-1DB5-4F19-B633-F9EE5BD11447}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2223DBF8-1DB5-4F19-B633-F9EE5BD11447}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2223DBF8-1DB5-4F19-B633-F9EE5BD11447}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C7B5957-79A2-4117-843B-7B765A47EA39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C7B5957-79A2-4117-843B-7B765A47EA39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C7B5957-79A2-4117-843B-7B765A47EA39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C7B5957-79A2-4117-843B-7B765A47EA39}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
