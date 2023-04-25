@@ -1,5 +1,6 @@
 ﻿using Bl;
 using Domains;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,20 +12,19 @@ namespace UnitTestProject
     [TestClass]
     public class SincCalculatorTest
     {
+        #region dependency injection
         private ClsSincCal oClsSincCal;
-
         private SincCalModel _model;
-
         public SincCalculatorTest()
         {
             _model = new SincCalModel();
             oClsSincCal = new ClsSincCal();
         }
-
+        #endregion
 
         #region TestSin
         [TestMethod]
-        public void TestSin()
+        public void TestSine_ShouldReturnCorrectValueForGivenAngle()
         {
             // Arrange
             _model.fSincNumber = 30;
@@ -39,7 +39,7 @@ namespace UnitTestProject
 
         #region TestTan
         [TestMethod]
-        public void TestTan()
+        public void TestTan_ShouldReturnCorrectValueForGivenAngle()
         {
             // Arrange
             _model.fSincNumber = 30;
@@ -54,7 +54,7 @@ namespace UnitTestProject
 
         #region TestCos
         [TestMethod]
-        public void TestCosn()
+        public void TestCos_ShouldReturnCorrectValueForGivenAngle()
         {
             // Arrange
             _model.fSincNumber = 30;
