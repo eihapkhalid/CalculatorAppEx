@@ -37,7 +37,7 @@ namespace UnitTestProject
             // Act
             oClsNormalCal.Div(_model);
             // Assert
-            Assert.AreEqual(2.1, _model.Result);
+            Assert.AreEqual(2.1, _model.Result, 0.0001);
         }
 
         [TestMethod]
