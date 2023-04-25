@@ -1,6 +1,15 @@
-<p>This is a console application for a calculator. The application has a <code>UIHelper</code> class, which contains the methods for displaying options to the user, and a <code>BusinessLayer (BL)</code> interface, which defines the methods that perform the calculations.</p>
-<p>The application supports two calculator types: Normal and Scientific. Normal calculator supports addition, subtraction, multiplication, and division. Scientific calculator supports sin, cos, and tan functions.</p>
-<p>The <code>Program</code> class contains the main method, where the application's <code>ServiceCollection</code> is created and registered with the required services. The application's Service Provider is also built, and the UIHelper is instantiated inside a while loop. The user is prompted with options to either use the normal or scientific calculator. The user's selection is read using the <code>Console.ReadLine()</code> method, and the selected option is executed.</p>
-<p>In the <code>UIHelper</code> class, the constructor takes four parameters, two instances of the <code>IBusinessLayer</code> interface (one for the normal calculator and one for the scientific calculator) and two instances of the Model classes. The Model classes are used to pass input values and receive calculated results from the BusinessLayer methods.</p>
-<p>The BL interface defines the methods that perform calculations for both the Normal and Scientific calculator. The <code>ClsNormalCal</code> and <code>ClsSincCal</code> classes implement the interface for the normal and scientific calculators, respectively. These classes contain the logic for performing the calculations based on the user's input values.</p>
-<p>Overall, this is a simple console application that demonstrates the use of interfaces and dependency injection in C#.</p>
+<html>
+  <head>
+    <title>Calculator Application Explanation</title>
+  </head>
+  <body>
+    <h1>Calculator Application</h1>
+    <p>This is a calculator application consisting of several projects and files.</p>
+    <p>The main project is called CalculatorApp and it contains a Program.cs file which is responsible for running the application. The project has a reference to the Bl and Domains projects.</p>
+    <p>The <strong>Bl</strong> project contains the business logic for the calculator application. There are two classes, ClsNormalCal and ClsSincCal, that implement the IBusinessLayer interface. ClsNormalCal performs basic arithmetic operations, such as addition, subtraction, multiplication, and division, while ClsSincCal performs trigonometric functions, such as sine, cosine, and tangent. The IBusinessLayer interface defines a contract that specifies the methods that must be implemented by any class that provides business logic for the calculator application.</p>
+    <p>The <strong>Domains</strong> project contains the domain models for the calculator application. There are two classes, NormalCalModel and SincCalModel, that represent the models for the ClsNormalCal and ClsSincCal classes respectively. The NormalCalModel class contains properties that represent the operands and result of a basic arithmetic operation, while the SincCalModel class contains properties that represent the angle and result of a trigonometric function.</p>
+    <p>The <strong>UiHelper.cs</strong> file, located in the CalculatorApp/Utlities folder, provides utility functions for the user interface. The user interface code is not present in this codebase, but the UiHelper.cs file likely provides functions for displaying the results of the calculator operations on the user interface.</p>
+    <p>The <strong>CalculatorApp.sln</strong> file is the solution file for the calculator application. It contains references to all the projects and files that make up the application.</p>
+    <p>Overall, this is a calculator application consisting of business logic classes, domain models, and a utility file for the user interface. The solution file ties everything together and the Program.cs file is responsible for running the application.</p>
+  </body>
+</html>
