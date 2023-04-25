@@ -12,7 +12,7 @@ namespace Bl
         #region Add Function
         public void Add(NormalCalModel table)
         {
-            Console.WriteLine($"result of sum = {table.fNumber1 + table.fNumber2}\n\n **************************");
+            Console.WriteLine($"result of sum = {table.Result = table.fNumber1 + table.fNumber2}\n\n **************************");
         }
 
         #endregion
@@ -20,14 +20,14 @@ namespace Bl
         #region Div Function
         public void Div(NormalCalModel table)
         {
-            Console.WriteLine($"result of Div = {table.fNumber1 / table.fNumber2}\n\n **************************");
+            Console.WriteLine($"result of Div = {table.Result = table.fNumber1 / table.fNumber2}\n\n **************************");
         }
         #endregion
 
         #region Mul Function
         public void Mul(NormalCalModel table)
         {
-            Console.WriteLine($"result of Mul = {table.fNumber1 * table.fNumber2} \n\n **************************");
+            Console.WriteLine($"result of Mul = {table.Result = table.fNumber1 * table.fNumber2} \n\n **************************");
         }
 
 
@@ -36,7 +36,7 @@ namespace Bl
         #region Sub Function
         public void Sub(NormalCalModel table)
         {
-            Console.WriteLine($"result of Sub = {table.fNumber1 - table.fNumber2} \n\n **************************");
+            Console.WriteLine($"result of Sub = {table.Result = table.fNumber1 - table.fNumber2} \n\n **************************");
         }
 
 

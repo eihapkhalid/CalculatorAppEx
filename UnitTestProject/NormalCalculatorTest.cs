@@ -10,7 +10,7 @@ namespace UnitTestProject
         private ClsNormalCal oClsNormalCal;
         private NormalCalModel _model;
 
-        public ClsNormalCalTest()
+        public  ClsNormalCalTest()
         {
             _model = new NormalCalModel();
             oClsNormalCal = new ClsNormalCal();
@@ -30,7 +30,7 @@ namespace UnitTestProject
 
         [TestMethod]
         public void Div_ShouldReturnCorrectResult_WhenGivenTwoNumbers()
-        {
+         {
             // Arrange
             _model.fNumber1 = 4.2F;
             _model.fNumber2 = 2;
@@ -49,7 +49,7 @@ namespace UnitTestProject
             // Act
             oClsNormalCal.Mul(_model);
             // Assert
-            Assert.AreEqual(15, _model.Result);
+            Assert.AreEqual(15, _model.Result, 0.0001);
         }
 
         [TestMethod]
@@ -61,7 +61,7 @@ namespace UnitTestProject
             // Act
             oClsNormalCal.Sub(_model);
             // Assert
-            Assert.AreEqual(2, _model.Result);
+            Assert.AreEqual(2, _model.Result, 0.0001);
         }
     }
 }
