@@ -17,15 +17,9 @@ namespace UnitTestProject
     {
         #region dependency injection
         private UiHelper oUiHelper;
-
-        private ClsNormalCal oClsNormalCal;
-        private NormalCalModel _model;
         public UiHelperMsTest()
         {
             oUiHelper = new UiHelper(new ClsNormalCal(), new ClsSincCal(), new NormalCalModel(), new SincCalModel());
-            _model = new NormalCalModel();
-            oClsNormalCal = new ClsNormalCal();
-
         }
         #endregion
 
