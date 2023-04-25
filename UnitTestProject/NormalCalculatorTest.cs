@@ -5,13 +5,13 @@ using Domains;
 namespace UnitTestProject
 {
     [TestClass]
-    public class ClsNormalCalTest
+    public class NormalCalculatorTest
     {
         #region dependency injection
         private ClsNormalCal oClsNormalCal;
         private NormalCalModel _model;
 
-        public  ClsNormalCalTest()
+        public NormalCalculatorTest()
         {
             _model = new NormalCalModel();
             oClsNormalCal = new ClsNormalCal();

@@ -15,15 +15,18 @@ namespace CalculatorApp.Utlities
         IBusinessLayer<SincCalModel> oClsSincCal;
         NormalCalModel normalCal;
         SincCalModel sincCal;
+        public string sVarSwitch = string.Empty;
+
         public UiHelper(IBusinessLayer<NormalCalModel> normalCalModel, IBusinessLayer<SincCalModel> sincCalModel, NormalCalModel _normalCal, SincCalModel _sincCal)
         {
             oClsNormalCal = normalCalModel;
             oClsSincCal = sincCalModel;
             normalCal = _normalCal;
             sincCal = _sincCal;
+            
         }
         #endregion
-
+        
         #region MainOptions
         public void MainOptions()
         {
@@ -38,41 +41,57 @@ namespace CalculatorApp.Utlities
 
         public void NormalCalOptions()
         {
-            string sVarSwitch = string.Empty;
+            
             while (sVarSwitch != "b")
             {
-                Console.WriteLine("press b to back  :\n");
-                Console.WriteLine("press 1 to add number  :\n");
-                Console.WriteLine("press 2 to sub number  :\n");
-                Console.WriteLine("press 3 to mul number  :\n");
-                Console.WriteLine("press 4 to div number  :\n");
-
+                NormalCalOptionScreen();
                 sVarSwitch = Console.ReadLine();
-                switch (sVarSwitch)
-                {
-                    case "b":
-                        Console.Clear();
-                        sVarSwitch = "b";
-                        break;
-                    case "1":
-                        nGetDataFromUser();
-                        oClsNormalCal.Add(normalCal);
-                        break;
-                    case "2":
-                        nGetDataFromUser();
-                        oClsNormalCal.Sub(normalCal);
-                        break;
-                    case "3":
-                        nGetDataFromUser();
-                        oClsNormalCal.Mul(normalCal);
-                        break;
-                    case "4":
-                        nGetDataFromUser();
-                        oClsNormalCal.Div(normalCal);
-                        break;
-                }
+                NormalCalOptionCase();
             }
         }
+        #endregion
+        #region NormalCalOptionScreen
+        public void NormalCalOptionScreen()
+        {
+            Console.WriteLine("press b to back  :\n");
+            Console.WriteLine("press 1 to add number  :\n");
+            Console.WriteLine("press 2 to sub number  :\n");
+            Console.WriteLine("press 3 to mul number  :\n");
+            Console.WriteLine("press 4 to div number  :\n");
+        }
+        #endregion
+
+        #region NormalCalOptionCase
+        public void NormalCalOptionCase()
+        {
+            switch (sVarSwitch)
+            {
+                case "b":
+                   // Console.Clear();
+                    sVarSwitch = "b";
+                    break;
+                case "1":
+                    //Console.Clear();
+                    nGetDataFromUser();
+                    oClsNormalCal.Add(normalCal);
+                    break;
+                case "2":
+                    //Console.Clear();
+                    nGetDataFromUser();
+                    oClsNormalCal.Sub(normalCal);
+                    break;
+                case "3":
+                    //Console.Clear();
+                    nGetDataFromUser();
+                    oClsNormalCal.Mul(normalCal);
+                    break;
+                case "4":
+                    //Console.Clear();
+                    nGetDataFromUser();
+                    oClsNormalCal.Div(normalCal);
+                    break;
+            }
+        } 
         #endregion
 
         #region SinCalOptions
@@ -113,7 +132,6 @@ namespace CalculatorApp.Utlities
         #region normal GetDataFromUser
         public void nGetDataFromUser()
         {
-            Console.Clear();
             Console.WriteLine("plz enter F number");
             float fParseNumber = 0;
             bool bCanConvert = float.TryParse(Console.ReadLine(), out fParseNumber);
