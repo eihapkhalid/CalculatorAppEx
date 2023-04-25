@@ -15,7 +15,7 @@ namespace Bl
         public void Cos(SincCalModel table)
         {
             
-            Console.WriteLine($"Cos({table.fSincNumber}) ={Math.Cos(table.fSincNumber)} \n\n **********************************");
+            Console.WriteLine($"Cos({table.fSincNumber}) ={table.Result = (float)Math.Cos(table.fSincNumber)} \n\n **********************************");
 
         }
         #endregion
@@ -23,14 +23,14 @@ namespace Bl
         #region Sin Function
         public void Sin(SincCalModel table)
         {
-            Console.WriteLine($"Sin({table.fSincNumber}) ={Math.Sin(table.fSincNumber)} \n\n **********************************");
+            Console.WriteLine($"Sin({table.fSincNumber}) ={table.Result = (float)Math.Sin(table.fSincNumber)} \n\n **********************************");
         }
         #endregion
 
         #region Tan Function
         public void tan(SincCalModel table)
         {
-            Console.WriteLine($"tan({table.fSincNumber}) ={Math.Tan(table.fSincNumber)} \n\n **********************************");
+            Console.WriteLine($"tan({table.fSincNumber}) ={table.Result = (float)Math.Tan(table.fSincNumber)} \n\n **********************************");
         }
         #endregion
 

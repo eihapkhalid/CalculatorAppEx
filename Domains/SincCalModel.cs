@@ -9,5 +9,6 @@ namespace Domains
     public class SincCalModel
     {
         public float fSincNumber { get; set; }
+        public float Result { get; set; }
     }
 }

@@ -11,26 +11,29 @@ namespace UnitTestProject
     [TestClass]
     public class SincCalculatorTest
     {
-        private ClsSincCal _sincCal;
+        private ClsSincCal oClsSincCal;
 
-        [TestInitialize]
-        public void TestInitialize()
+        private SincCalModel _model;
+
+        public SincCalculatorTest()
         {
-            _sincCal = new ClsSincCal();
+            _model = new SincCalModel();
+            oClsSincCal = new ClsSincCal();
         }
+
 
         #region TestSin
         [TestMethod]
         public void TestSin()
         {
-            SincCalModel model = new SincCalModel();
-            model.fSincNumber = 30;
+            // Arrange
+            _model.fSincNumber = 30;
 
+            // Act
+            oClsSincCal.Sin(_model);
 
-            _sincCal.Sin(model);
-
-            // Check that the result is correct
-            Assert.AreEqual(-0.9880316240928618, Math.Sin(model.fSincNumber));
+            // Assert
+            Assert.AreEqual(-0.9880316, _model.Result, 0.0001);
         }
         #endregion
 
@@ -38,14 +41,14 @@ namespace UnitTestProject
         [TestMethod]
         public void TestTan()
         {
-            SincCalModel model = new SincCalModel();
-            model.fSincNumber = 30;
+            // Arrange
+            _model.fSincNumber = 30;
 
+            // Act
+            oClsSincCal.tan(_model);
 
-            _sincCal.tan(model);
-
-            // Check that the result is correct
-            Assert.AreEqual(-6.405331196646276, Math.Tan(model.fSincNumber));
+            // Assert
+            Assert.AreEqual(-6.405331196646276, _model.Result, 0.0001);
         }
         #endregion
 
@@ -53,14 +56,14 @@ namespace UnitTestProject
         [TestMethod]
         public void TestCosn()
         {
-            SincCalModel model = new SincCalModel();
-            model.fSincNumber = 30;
+            // Arrange
+            _model.fSincNumber = 30;
 
+            // Act
+            oClsSincCal.Cos(_model);
 
-            _sincCal.Cos(model);
-
-            // Check that the result is correct
-            Assert.AreEqual(0.15425144988758405, Math.Cos(model.fSincNumber));
+            // Assert
+            Assert.AreEqual(0.15425144988758405, _model.Result, 0.0001);
         }
         #endregion
     }
