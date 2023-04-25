@@ -50,6 +50,7 @@ namespace CalculatorApp.Utlities
             }
         }
         #endregion
+
         #region NormalCalOptionScreen
         public void NormalCalOptionScreen()
         {
@@ -67,26 +68,22 @@ namespace CalculatorApp.Utlities
             switch (sVarSwitch)
             {
                 case "b":
-                   // Console.Clear();
+                    Console.Clear();
                     sVarSwitch = "b";
                     break;
                 case "1":
-                    //Console.Clear();
                     nGetDataFromUser();
                     oClsNormalCal.Add(normalCal);
                     break;
                 case "2":
-                    //Console.Clear();
                     nGetDataFromUser();
                     oClsNormalCal.Sub(normalCal);
                     break;
                 case "3":
-                    //Console.Clear();
                     nGetDataFromUser();
                     oClsNormalCal.Mul(normalCal);
                     break;
                 case "4":
-                    //Console.Clear();
                     nGetDataFromUser();
                     oClsNormalCal.Div(normalCal);
                     break;
@@ -132,6 +129,7 @@ namespace CalculatorApp.Utlities
         #region normal GetDataFromUser
         public void nGetDataFromUser()
         {
+            Console.Clear();
             Console.WriteLine("plz enter F number");
             float fParseNumber = 0;
             bool bCanConvert = float.TryParse(Console.ReadLine(), out fParseNumber);

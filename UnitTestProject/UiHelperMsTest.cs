@@ -24,7 +24,7 @@ namespace UnitTestProject
         #endregion
 
         [TestMethod]
-        #region TestNormalCalOptionScreen
+        #region BranchOptions TestNormalCalOptionScreen
         public void TestNormalCalOptionScreen_ShouldPrintCorrectOptions()
         {
             // Arrange
@@ -43,6 +43,22 @@ namespace UnitTestProject
         }
         #endregion
 
+        [TestMethod]
+        #region MainOptions TestNormalCalOptionScreen
+        public void TestNormalCalMainOptionsScreen_ShouldPrintCorrectOptions()
+        {
+            // Arrange
+            var mockOutput = new Mock<TextWriter>();
+            Console.SetOut(mockOutput.Object);
+            // Act
+            oUiHelper.MainOptions();
+            // Assert
+            mockOutput.Verify(x => x.WriteLine("*** wlc to cal app :\n"), Times.Once);
+            mockOutput.Verify(x => x.WriteLine("press e to exit  :\n"), Times.Once);
+            mockOutput.Verify(x => x.WriteLine("press 1 to normal calculator :\n"), Times.Once);
+            mockOutput.Verify(x => x.WriteLine("press 2 to scientific calculator :\n"), Times.Once);
+        }
+        #endregion
 
         #region TestNormalCalOptionCase
         /* [TestMethod]
