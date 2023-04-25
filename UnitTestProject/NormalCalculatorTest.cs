@@ -1,82 +1,67 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Bl;
+﻿using Bl;
 using Domains;
+
 
 namespace UnitTestProject
 {
     [TestClass]
-    public class NormalCalculatorTest
+    public class ClsNormalCalTest
     {
-        private ClsNormalCal _normalCal;
+        private ClsNormalCal oClsNormalCal;
+        private NormalCalModel _model;
 
-        [TestInitialize]
-        public void TestInitialize()
+        public ClsNormalCalTest()
         {
-            _normalCal = new ClsNormalCal();
+            _model = new NormalCalModel();
+            oClsNormalCal = new ClsNormalCal();
         }
 
-        #region TestAdd
         [TestMethod]
-        public void TestAdd()
+        public void TestAdd_ShouldReturnCorrectSum()
         {
-            NormalCalModel model = new NormalCalModel();
-            model.fNumber1 = 5;
-            model.fNumber2 = 10;
-
-            _normalCal.Add(model);
-
-            // Check that the result is correct
-            Assert.AreEqual(15, model.fNumber1 + model.fNumber2);
+            // Arrange
+            _model.fNumber1 = 0.1F;
+            _model.fNumber2 = 2;
+            // Act
+            oClsNormalCal.Add(_model);
+            // Assert
+            Assert.AreEqual(2.1, _model.Result, 0.0001);
         }
-        #endregion
 
-        #region TestDiv
         [TestMethod]
-        public void TestDiv()
+        public void Div_ShouldReturnCorrectResult_WhenGivenTwoNumbers()
         {
-            NormalCalModel model = new NormalCalModel();
-            model.fNumber1 = 20;
-            model.fNumber2 = 4;
-
-            _normalCal.Div(model);
-
-            // Check that the result is correct
-            Assert.AreEqual(5, model.fNumber1 / model.fNumber2);
+            // Arrange
+            _model.fNumber1 = 4.2F;
+            _model.fNumber2 = 2;
+            // Act
+            oClsNormalCal.Div(_model);
+            // Assert
+            Assert.AreEqual(2.1, _model.Result);
         }
-        #endregion
 
-        #region TestMul
         [TestMethod]
-        public void TestMul()
+        public void Mul_ShouldReturnCorrectResult_WhenGivenTwoNumbers()
         {
-            NormalCalModel model = new NormalCalModel();
-            model.fNumber1 = 6;
-            model.fNumber2 = 8;
-
-            _normalCal.Mul(model);
-
-            // Check that the result is correct
-            Assert.AreEqual(48, model.fNumber1 * model.fNumber2);
+            // Arrange
+            _model.fNumber1 = 3;
+            _model.fNumber2 = 5;
+            // Act
+            oClsNormalCal.Mul(_model);
+            // Assert
+            Assert.AreEqual(15, _model.Result);
         }
-        #endregion
 
-        #region TestSub
         [TestMethod]
-        public void TestSub()
+        public void Sub_ShouldReturnCorrectResult_WhenGivenTwoNumbers()
         {
-            NormalCalModel model = new NormalCalModel();
-            model.fNumber1 = 15;
-            model.fNumber2 = 7;
-
-            _normalCal.Sub(model);
-
-            // Check that the result is correct
-            Assert.AreEqual(8, model.fNumber1 - model.fNumber2);
-        } 
-        #endregion
+            // Arrange
+            _model.fNumber1 = 5;
+            _model.fNumber2 = 3;
+            // Act
+            oClsNormalCal.Sub(_model);
+            // Assert
+            Assert.AreEqual(2, _model.Result);
+        }
     }
 }
