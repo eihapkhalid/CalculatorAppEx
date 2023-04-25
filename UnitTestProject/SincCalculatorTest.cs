@@ -22,8 +22,9 @@ namespace UnitTestProject
         }
         #endregion
 
-        #region TestSin
         [TestMethod]
+        #region TestSin
+
         public void TestSine_ShouldReturnCorrectValueForGivenAngle()
         {
             // Arrange
@@ -37,8 +38,8 @@ namespace UnitTestProject
         }
         #endregion
 
-        #region TestTan
         [TestMethod]
+        #region TestTan
         public void TestTan_ShouldReturnCorrectValueForGivenAngle()
         {
             // Arrange
@@ -52,8 +53,8 @@ namespace UnitTestProject
         }
         #endregion
 
-        #region TestCos
         [TestMethod]
+        #region TestCos
         public void TestCos_ShouldReturnCorrectValueForGivenAngle()
         {
             // Arrange

@@ -31,7 +31,6 @@ namespace CalculatorApp.Utlities
             Console.WriteLine("press e to exit  :\n");
             Console.WriteLine("press 1 to normal calculator :\n");
             Console.WriteLine("press 2 to scientific calculator :\n");
-            Console.WriteLine("press 3 to proff calculator  :\n");
         } 
         #endregion
 

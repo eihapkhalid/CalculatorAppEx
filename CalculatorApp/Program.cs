@@ -51,8 +51,6 @@ namespace CalculatorApp
                         Console.Clear();
                         uiHelper.SinCalOptions();
                         break;
-                    case "3":
-                        break;
                 } 
                 #endregion
 
