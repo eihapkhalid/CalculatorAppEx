@@ -44,24 +44,24 @@ namespace UnitTestProject
         public void Mul_ShouldReturnCorrectResult_WhenGivenTwoNumbers()
         {
             // Arrange
-            _model.fNumber1 = 3;
+            _model.fNumber1 = 3.1F;
             _model.fNumber2 = 5;
             // Act
             oClsNormalCal.Mul(_model);
             // Assert
-            Assert.AreEqual(15, _model.Result, 0.0001);
+            Assert.AreEqual(15.5, _model.Result, 0.0001);
         }
 
         [TestMethod]
         public void Sub_ShouldReturnCorrectResult_WhenGivenTwoNumbers()
         {
             // Arrange
-            _model.fNumber1 = 5;
+            _model.fNumber1 = 5.1F;
             _model.fNumber2 = 3;
             // Act
             oClsNormalCal.Sub(_model);
             // Assert
-            Assert.AreEqual(2, _model.Result, 0.0001);
+            Assert.AreEqual(2.1, _model.Result, 0.0001);
         }
     }
 }
